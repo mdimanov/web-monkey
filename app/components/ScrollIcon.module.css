@@ -1,0 +1,41 @@
+.scroll {
+  text-align: center;
+  padding-bottom: 1.5em;
+  animation: fadeInfadeOut 3s infinite;
+}
+
+.scrollDown:before {
+  background: none repeat scroll 0 0 var(--color-primary);
+  border-radius: 2px;
+  content: "";
+  display: block;
+  height: 4px;
+  left: 50%;
+  margin-left: -1px;
+  position: absolute;
+  top: 8px;
+  width: 2px;
+}
+
+.scrollDown {
+  border: 2px solid var(--color-primary);
+  border-radius: 10px;
+  color: var(--color-primary);
+  display: block;
+  height: 30px;
+  margin: 0 auto 5px;
+  position: relative;
+  width: 20px;
+}
+
+@keyframes fadeInfadeOut {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
