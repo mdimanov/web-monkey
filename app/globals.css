@@ -5,38 +5,55 @@
 :root {
   --color-primary: #222;
   --color-white: #fff;
+  --color-black: #000;
+  --color-dark: rgb(5, 15, 26);
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-primary: #fff;
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+body {
+  color: var(--color-white);
+  background: linear-gradient(
+    149deg,
+    var(--color-black) 0%,
+    var(--color-dark) 50%,
+    var(--color-dark) 100%
+  );
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: var(--color-white);
+/* Hide the default scrollbar */
+body::-webkit-scrollbar {
+  width: 0.25em;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background-color: #888;
 }
 
 a {
   transition: all, ease, 0.5s;
 }
 
-.bg-home-wrap.blur {
+.bg-blur-wrap {
+  transition: all 1.5s ease;
+}
+
+.bg-blur-wrap.blur {
   filter: blur(3px);
-  transition: filter 0.5s ease;
+  transition: all 1.5s ease;
 }
 
 .btn-outline {
   border-radius: 8px;
   padding: 0.75em 1.5em;
-  border: 1px solid var(--color-primary);
+  border: 1px solid var(--color-white);
 }
 
 .btn-outline:hover {
@@ -54,29 +71,75 @@ a {
   right: -1.5rem;
   opacity: 0;
 }
-
-.bg-home-wrap {
-  position: relative;
-  transition: filter 0.3s ease;
+.bg-home-content-gradient {
+  min-height: 100vh;
 }
-
-.bg-home-wrap:before {
+.bg-home-content-gradient:before {
   content: " ";
   display: block;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
+  background: radial-gradient(
+    211.50000000000003% 113.1% at -66.4% 35.9%,
+    #0b014a 39.13195153221485%,
+    rgb(0, 73, 184) 51.424349881796694%,
+    rgb(50, 100, 227) 67.59505338573997%,
+    rgb(0, 204, 255) 77.36876020980384%,
+    rgb(110, 255, 211) 90%,
+    rgb(236, 241, 56) 100%
+  );
+  inset: 108px 0 0;
+}
+
+.bg-home-black-gradiednt {
+  background: linear-gradient(
+    180deg,
+    #000000 0%,
+    #000000 108px,
+    rgba(0, 0, 0, 0) 100%
+  );
   height: 100%;
-  opacity: 0.15;
-  background-image: url("/assets/images/home-office-setup.jpg");
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size: cover;
+  inset: 0 0 1535px;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.bg-home-corner-black-container {
+  flex: none;
+  height: 648px;
+  pointer-events: none;
+  position: absolute;
+  right: -432px;
+  top: -97px;
+  transform: rotate(45deg);
+  width: 1305px;
+  z-index: 8;
 }
 
 .bg-home-content {
   position: relative;
+}
+
+.page-transition-enter {
+  opacity: 0;
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+
+.page-transition-exit {
+  opacity: 1;
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
 }
 
 @media (max-width: 640px) {

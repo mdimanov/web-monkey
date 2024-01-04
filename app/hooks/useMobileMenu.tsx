@@ -1,8 +1,9 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
+import { useBlurContext } from "../components/BlurContext";
 
 const useMobileMenu = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const blurWrapperRef = useRef<HTMLDivElement | null>(null);
+  const blurWrapperRef = useBlurContext();
 
   useEffect(() => {
     // Create a variable to store the current value of blurWrapperRef
@@ -19,9 +20,9 @@ const useMobileMenu = () => {
         currentRef.classList.remove("blur");
       }
     };
-  }, [mobileMenuOpen]);
+  }, [mobileMenuOpen, blurWrapperRef]);
 
-  return { mobileMenuOpen, setMobileMenuOpen, blurWrapperRef };
+  return { mobileMenuOpen, setMobileMenuOpen };
 };
 
 export default useMobileMenu;

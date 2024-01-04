@@ -1,0 +1,13 @@
+.button {
+  transition: all, ease, 0.5s;
+}
+.button .icon {
+  transition: all, ease, 0.5s;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.button:hover .icon {
+  padding-left: 1.5em;
+  padding-right: 0.5em;
+}

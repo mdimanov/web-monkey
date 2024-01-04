@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { useState } from "react";
 import styles from "./MobileMenuButton.module.css";
@@ -15,7 +17,10 @@ const MobileMenuButton: React.FC<HeaderProps> = ({ setMobileMenuOpen }) => {
   };
 
   return (
-    <div className={`flex lg:hidden ${styles.mobileMenuWrapper}`}>
+    <div
+      className={`flex lg:hidden ${styles.mobileMenuWrapper}`}
+      style={{ position: buttonToggle ? "fixed" : "absolute" }}
+    >
       <button
         type="button"
         className="-m-2.5 rounded-md p-2.5 text-gray-700"
