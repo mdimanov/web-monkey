@@ -1,9 +1,12 @@
+"use client";
+// remove  "use client" after development. Used in order to outo reload and not catche the page.
 import Link from "next/link";
 import Header from "./components/Header";
 import ScrollIcon from "./components/ScrollIcon";
 import ButtonArrow from "./components/ButtonArrow";
 import MobileNavigation from "./components/MobileNavigation";
 import BlurWrapper from "./components/BlurWrapper";
+import LatestProjects from "./components/LatestProjects";
 
 export default function Home() {
   return (
@@ -34,12 +37,12 @@ export default function Home() {
                 }}
               ></div>
             </div>
-            <div className="relative z-10 mx-auto max-w-4xl py-32 sm:py-48 lg:py-56">
+            <div className="relative z-10 mx-auto max-w-4xl py-16 sm:py-48 lg:py-56">
               <div className="text-center">
                 <h1 className="text-4xl font-black tracking-tight text-white sm:text-6xl">
                   Bringing Ideas to Life. Where Creativity Meets Code!
                 </h1>
-                <p className="mt-6 text-lg leading-8 text-slate-200	">
+                <p className="mt-6 md:text-lg md:leading-8 text-slate-200	">
                   Hello, I`m Miro, a passionate{" "}
                   <strong>front-end developer</strong> on a mission to turn
                   dreams into interactive realities. I`m here to sprinkle a bit
@@ -67,13 +70,13 @@ export default function Home() {
             <ScrollIcon />
           </div>
         </div>
-        <div className="bg-projects">
-          <div className="container mx-auto py-20 px-4">
-            <div className="flex flex-col w-auto md:w-3/5 gap-y-10">
+        <section className="wm-projects">
+          <div className="container mx-auto md:py-20 py-5 px-4">
+            <div className="flex flex-col w-auto py-10 md:w-3/5 md:gap-y-10 gap-y-5">
               <span className="text-emerald-400 text-2xl font-extralight">
-                Projects
+                Recent projects
               </span>
-              <h2 className="text-2xl font-black tracking-tight text-white sm:text-4xl">
+              <h2 className="text-xl font-black tracking-tight text-white md:text-4xl">
                 Your work is going to fill a large part of your life.{" "}
                 <span className="opacity-50">
                   And the only way to be truly satisfied is to do what you
@@ -82,8 +85,9 @@ export default function Home() {
               </h2>
               <ButtonArrow text="See all projects" link="#" />
             </div>
+            <LatestProjects />
           </div>
-        </div>
+        </section>
       </BlurWrapper>
       <MobileNavigation />
     </>
