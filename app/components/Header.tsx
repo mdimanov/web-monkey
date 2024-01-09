@@ -1,13 +1,9 @@
-"use client";
-
-import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
-import Image from "next/image";
+import Logo from "./Logo";
 import Link from "next/link";
+import NavItem from "./NavItem";
 import { NAVIGATION } from "../utils/constants";
 
 const Header = () => {
-  const pathname = usePathname();
   return (
     <header className="absolute inset-x-0 top-0 z-50">
       <div className="container mx-auto px-4">
@@ -15,33 +11,10 @@ const Header = () => {
           className="flex items-center justify-between py-6"
           aria-label="Global"
         >
-          <div className="flex lg:flex-1">
-            <Link
-              href="/"
-              className="logo -m-1.5 p-1.5 flex justify-items-center items-center"
-            >
-              <motion.div whileHover={{ rotate: -12 }}>
-                <Image
-                  src="/assets/images/webmonkey-logo.png"
-                  width="60"
-                  height="60"
-                  alt="webmonkey logo"
-                />
-              </motion.div>
-            </Link>
-          </div>
+          <Logo />
           <div className="hidden lg:flex lg:gap-x-12">
             {NAVIGATION.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`text-sm font-semibold leading-6 p-2 text-white hover:text-emerald-400 ${
-                  pathname === item.href ? "active text-emerald-400" : ""
-                }`}
-                shallow
-              >
-                {item.name}
-              </Link>
+              <NavItem key={item.name} item={item} />
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
