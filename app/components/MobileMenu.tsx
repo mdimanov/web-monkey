@@ -1,9 +1,7 @@
-"use client";
-
-import { usePathname } from "next/navigation";
-import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { NAVIGATION } from "../utils/constants";
+import SocialNetworks from "./SocialNetworks";
+import MobileMenuNavItem from "./MobileMenuNavItem";
 
 type MobileMenuProps = {
   mobileMenuOpen: boolean;
@@ -20,24 +18,11 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ mobileMenuOpen }) => {
     },
   };
 
-  const variants = {
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        y: { stiffness: 1000, velocity: -100 },
-      },
-    },
-    hidden: {
-      y: 50,
-      opacity: 0,
-      transition: {
-        y: { stiffness: 1000 },
-      },
-    },
+  const fadeInitemVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+    exit: { opacity: 0 },
   };
-
-  const pathname = usePathname();
 
   return (
     <AnimatePresence>
@@ -62,23 +47,29 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ mobileMenuOpen }) => {
                 }}
                 className="space-y-2 py-6 px-4"
               >
+                <MobileMenuNavItem href="/">Home</MobileMenuNavItem>
                 {NAVIGATION.map((item) => (
-                  <motion.div key={item.name} variants={variants}>
-                    <Link
-                      href={item.href}
-                      className={`text-3xl sm:text-5xl font-black leading-7 ${
-                        pathname === item.href
-                          ? "active text-emerald-400"
-                          : "text-black"
-                      }`}
-                    >
-                      {item.name}
-                    </Link>
-                  </motion.div>
+                  <MobileMenuNavItem key={item.name} href={item.href}>
+                    {item.name}
+                  </MobileMenuNavItem>
                 ))}
               </motion.div>
             </div>
           </div>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            variants={fadeInitemVariants}
+            transition={{
+              duration: 0.4,
+            }}
+            style={{
+              padding: "0 6px",
+            }}
+          >
+            <SocialNetworks color="black" />
+          </motion.div>
         </motion.div>
       )}
     </AnimatePresence>

@@ -1,0 +1,15 @@
+.socialNetworks a svg {
+  transition: all, ease, 1s;
+}
+
+.socialNetworks a.linkedin:hover svg {
+  fill: #0a66c2;
+}
+
+.socialNetworks a.instagram:hover svg {
+  fill: #833ab4;
+}
+
+.socialNetworks a.git:hover svg {
+  fill: #405de6;
+}

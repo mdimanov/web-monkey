@@ -1,5 +1,8 @@
+"use client";
+//Remove "use client" used for development purpose remove when ready
 import Link from "next/link";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import ScrollIcon from "./components/ScrollIcon";
 import ButtonArrow from "./components/ButtonArrow";
 import MobileNavigation from "./components/MobileNavigation";
@@ -21,7 +24,11 @@ export default function Home() {
             <div className="relative z-10 mx-auto max-w-4xl py-16 sm:py-48 lg:py-56">
               <div className="text-center">
                 <h1 className="text-4xl font-black tracking-tight text-white sm:text-6xl">
-                  Bringing Ideas to Life. Where Creativity Meets Code!
+                  Bringing Ideas to Life.
+                  <br />
+                  <span className="font-light">
+                    Where Creativity Meets Code!
+                  </span>
                 </h1>
                 <p className="mt-6 md:text-lg md:leading-8 text-slate-200	">
                   Hello, I`m Miro, a passionate{" "}
@@ -34,7 +41,7 @@ export default function Home() {
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6">
                   <Link
-                    href="#wm-projects"
+                    href="#recent-projects"
                     className="rounded-md bg-emerald-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
                     Recent projects
@@ -52,7 +59,7 @@ export default function Home() {
             <ScrollIcon />
           </div>
         </div>
-        <section id="wm-projects">
+        <section id="recent-projects">
           <div className="container mx-auto md:py-20 md:my-20 my-5 py-5 px-6">
             <div className="flex flex-col w-auto py-10 md:w-3/5 md:gap-y-10 gap-y-5">
               <span className="text-emerald-400 text-2xl font-extralight">
@@ -81,34 +88,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <footer>
-          <div className="container mx-auto px-6">
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-          </div>
-        </footer>
+        <Footer />
       </BlurWrapper>
       <MobileNavigation />
     </>
