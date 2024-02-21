@@ -70,7 +70,7 @@ export const TECHNOLOGIES_LOGOS: TechLogoType[] = [
   },
 ];
 
-export type LatestProjectData = {
+export type ProjectData = {
   id: number;
   title: string;
   banner: string;
@@ -78,12 +78,13 @@ export type LatestProjectData = {
   specifications: string[];
 };
 
-export const LATEST_PROJECTS: { data: LatestProjectData[] } = {
+export const PROJECTS: { data: ProjectData[] } = {
   data: [
     {
       id: 1,
       title: "Online store for yachting enthusiasts",
       banner: "/assets/images/yachtbg.jpg",
+      url: "https://yachtbg.com/",
       specifications: ["Website Application", "E-commerce"],
     },
     {

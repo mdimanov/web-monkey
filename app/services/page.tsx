@@ -1,6 +1,12 @@
 import Header from "../components/Header";
 import MobileNavigation from "../components/MobileNavigation";
 import BlurWrapper from "../components/BlurWrapper";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Services",
+  description: "Hello, Services",
+};
 
 export default function Services() {
   return (

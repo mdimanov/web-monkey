@@ -51,7 +51,7 @@ a {
 }
 
 .btn-outline {
-  border-radius: 8px;
+  border-radius: 30px;
   padding: 0.75em 1.5em;
   border: 1px solid var(--color-white);
 }
@@ -241,6 +241,25 @@ a {
   z-index: 3;
   transform: translateX(-50%);
   text-align: center;
+}
+
+.filter-row {
+  display: flex;
+  gap: 15px;
+}
+
+.pill-outline {
+  border-radius: 30px;
+  padding: 0.75em 1.5em;
+  cursor: pointer;
+  border: 1px solid var(--color-white);
+  transition: all, ease, 0.5s;
+}
+
+.pill-outline.active,
+.pill-outline:hover {
+  background-color: rgb(52 211 153 / 1);
+  border: 1px solid transparent;
 }
 
 footer {

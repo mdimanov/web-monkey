@@ -80,7 +80,6 @@ Child.displayName = "Child";
 
 export default function PageLayout({ children }: { children: ReactNode }) {
   const segment = useSelectedLayoutSegment();
-  console.log(segment);
 
   return (
     <AnimatePresence mode="popLayout" initial={false}>
