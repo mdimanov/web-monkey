@@ -1,23 +1,21 @@
 import SingleProject from "./SingleProject";
-import { PROJECTS } from "../utils/constants";
-import { ProjectData } from "../utils/constants";
+import useContentfulProjects from "../hooks/useContentfulProjects";
 
 const LatestProjects = () => {
-  const LATEST_PROJECTS: { data: ProjectData[] } = {
-    data: PROJECTS.data.slice(0, 2), // Get the first two projects from PROJECTS
-  };
+  const projects = useContentfulProjects();
+
+  const latestProjects = projects.slice(0, 2); // Get the first two projects from PROJECTS;
 
   return (
     <div className="grid md:grid-cols-2 grid-cols-1 md:gap-5 gap-4 md:py-10 py-5">
-      {LATEST_PROJECTS.data.map((project: ProjectData) => (
+      {latestProjects.map((project) => (
         <SingleProject
-          key={project.id}
-          id={project.id}
-          title={project.title}
-          banner={project.banner}
-          url={project.url}
-          type={project.type}
-          specifications={project.specifications}
+          key={project.sys.id}
+          title={project.fields.title}
+          banner={project.fields.banner.fields.file.url}
+          url={project.fields.url}
+          type={project.fields.type}
+          specifications={project.fields.specifications}
           gridSize={2}
         />
       ))}

@@ -10,7 +10,7 @@ const Filter: React.FC<Props> = ({ filter, setFilter }) => {
     setFilter(filterType);
   };
 
-  const filterOptions: FilteredType[] = ["all", "code", "design"];
+  const filterOptions: FilteredType[] = ["All", "Code", "Design"];
 
   return (
     <div className="filter-row pb-20">
