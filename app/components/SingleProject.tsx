@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import { useInView } from "framer-motion";
 import Link from "next/link";
 import { ProjectData } from "../utils/constants";
-import styles from "./SinglegProject.module.css";
+import styles from "./SingleProject.module.css";
 
 const SingleProject: React.FC<ProjectData & { gridSize: number }> = ({
   title,

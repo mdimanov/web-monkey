@@ -16,6 +16,7 @@ const LatestProjects = () => {
           title={project.title}
           banner={project.banner}
           url={project.url}
+          type={project.type}
           specifications={project.specifications}
           gridSize={2}
         />

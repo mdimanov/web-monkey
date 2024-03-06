@@ -22,22 +22,7 @@ export default function Projects() {
                 </div>
               </div>
             </div>
-            <section id="projects">
-              <div className="container mx-auto px-6">
-                <div className="filter-row pb-20">
-                  <div className="pill-outline active text-sm font-semibold leading-6 text-white">
-                    All
-                  </div>
-                  <div className="pill-outline text-sm font-semibold leading-6 text-white">
-                    Design
-                  </div>
-                  <div className="pill-outline text-sm font-semibold leading-6 text-white">
-                    Website
-                  </div>
-                </div>
-                <AllProjects />
-              </div>
-            </section>
+            <AllProjects />
           </div>
         </div>
         <Footer />
