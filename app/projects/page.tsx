@@ -4,6 +4,12 @@ import MobileNavigation from "../components/MobileNavigation";
 import BlurWrapper from "../components/BlurWrapper";
 import AllProjects from "../components/AllProjects";
 import BlobAnimatedBackground from "../components/BlobAnimatedBackground";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description: "Behind each project lies a 🌟 unique story",
+};
 
 export default function Projects() {
   return (
