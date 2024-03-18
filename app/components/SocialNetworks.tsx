@@ -14,6 +14,7 @@ const SocialNetworks: React.FC<SocialNetworksProps> = ({ color }) => {
         href="https://www.linkedin.com/in/miroslav-dimanov-365235119/"
         className={`${styles.linkedin} p-3`}
         target="_blank"
+        aria-label="LinkedIn profile of Miroslav Dimanov"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -26,9 +27,10 @@ const SocialNetworks: React.FC<SocialNetworksProps> = ({ color }) => {
         </svg>
       </Link>
       <Link
-        href="https://www.linkedin.com/in/miroslav-dimanov-365235119/"
+        href="https://www.instagram.com/m.dimanov/"
         className={`${styles.instagram} p-3`}
         target="_blank"
+        aria-label="Instagram profile of Miroslav Dimanov"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -41,9 +43,10 @@ const SocialNetworks: React.FC<SocialNetworksProps> = ({ color }) => {
         </svg>
       </Link>
       <Link
-        href="https://www.linkedin.com/in/miroslav-dimanov-365235119/"
+        href="https://github.com/mdimanov"
         className={`${styles.git} p-3`}
         target="_blank"
+        aria-label="Github profile of Miroslav Dimanov"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
