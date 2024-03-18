@@ -497,4 +497,12 @@ footer {
     width: 100%;
     padding: 20px;
   }
+
+  .form-wrapper {
+    padding: 20px 10px;
+  }
+
+  .form-wrapper label {
+    display: none;
+  }
 }

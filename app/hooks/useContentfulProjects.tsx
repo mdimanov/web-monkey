@@ -1,5 +1,3 @@
-// useContentfulProjects.js
-
 import { useState, useEffect } from "react";
 import { ContentfulProject } from "../utils/constants";
 
@@ -20,7 +18,8 @@ const useContentfulProjects = () => {
     };
 
     fetchData();
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const getProjects = async () => {
     const projectsData = await client.getEntries();
