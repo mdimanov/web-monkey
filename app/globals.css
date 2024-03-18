@@ -7,6 +7,8 @@
   --color-white: #fff;
   --color-black: #000;
   --color-dark: rgb(5, 15, 26);
+  --color-emerald: rgb(52 211 153 / 1);
+  --color-dark-emerald: #003d27;
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -37,7 +39,8 @@ body::-webkit-scrollbar-thumb {
   background-color: #888;
 }
 
-a {
+a,
+button {
   transition: all, ease, 0.5s;
 }
 
@@ -258,7 +261,8 @@ a {
 
 .pill-outline.active,
 .pill-outline:hover {
-  background-color: rgb(52 211 153 / 1);
+  background-color: var(--color-emerald);
+  color: var(--color-dark-emerald);
   border: 1px solid transparent;
 }
 
@@ -305,12 +309,92 @@ a {
 
 .services-item {
   width: 30%;
-  padding-bottom: 50px;
+  padding: 40px;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  cursor: crosshair;
+  border: 2px solid transparent;
+  transition: all, ease, 0.5s;
+}
+
+.services-item:hover {
+  border: 2px solid var(--color-dark-emerald);
 }
 
 .services {
-  color: #040e18;
+  color: var(--color-dark-emerald);
   background: rgb(52 211 153);
+}
+
+.form-wrapper {
+  border-bottom-width: 0px;
+  border-color: rgba(255, 255, 255, 0.05);
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 1px;
+  background-color: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(3px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 1.0077627319085878px 2.6201831029623284px -0.3125px #00000040,
+    0 2.3885756205709185px 6.210296613484388px -0.625px #00000040,
+    0 4.357008827588287px 11.328222951729547px -0.9375px #00000040,
+    0 7.2435184293135535px 18.83314791621524px -1.25px #00000040,
+    0 11.697691633173964px 30.413998246252305px -1.5625px #00000040,
+    0 19.147960564453385px 49.7846974675788px -1.875px #00000040,
+    0 32.97149505802081px 85.7258871508541px -2.1875px #00000040,
+    0 60px 156px -2.5px #00000040, 0 0 120px 40px #124cf240;
+}
+
+input[type="range"] {
+  --c: rgb(52 211 153); /* active color */
+  --g: 8px; /* the gap */
+  --l: 5px; /* line thickness*/
+  --s: 30px; /* thumb size*/
+
+  max-width: 480px;
+  height: var(--s); /* needed for Firefox*/
+  --_c: color-mix(in srgb, var(--c), #000 var(--p, 0%));
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+input[type="range"]:focus-visible,
+input[type="range"]:hover {
+  --p: 25%;
+}
+input[type="range"]:active,
+input[type="range"]:focus-visible {
+  --_b: var(--s);
+}
+/* chromium */
+input[type="range" i]::-webkit-slider-thumb {
+  height: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: 0 0 0 var(--_b, var(--l)) inset var(--_c);
+  border-image: linear-gradient(90deg, var(--_c) 50%, #ababab 0) 0 1 /
+    calc(50% - var(--l) / 2) 100vw/0 calc(100vw + var(--g));
+  -webkit-appearance: none;
+  appearance: none;
+  transition: 0.3s;
+}
+/* Firefox */
+input[type="range"]::-moz-range-thumb {
+  height: var(--s);
+  width: var(--s);
+  background: none;
+  border-radius: 50%;
+  box-shadow: 0 0 0 var(--_b, var(--l)) inset var(--_c);
+  border-image: linear-gradient(90deg, var(--_c) 50%, #ababab 0) 0 1 /
+    calc(50% - var(--l) / 2) 100vw/0 calc(100vw + var(--g));
+  -moz-appearance: none;
+  appearance: none;
+  transition: 0.3s;
 }
 
 footer {
@@ -377,6 +461,12 @@ footer {
   }
 }
 
+@media (max-width: 1024px) {
+  .services-item {
+    width: 45%;
+  }
+}
+
 @media (max-width: 640px) {
   .mobile-menu {
     width: 75%;
@@ -403,8 +493,6 @@ footer {
 
   .services-item {
     width: 100%;
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 20px;
   }
 }

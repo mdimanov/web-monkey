@@ -47,7 +47,6 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ mobileMenuOpen }) => {
                 }}
                 className="space-y-2 py-6 px-4"
               >
-                <MobileMenuNavItem href="/">Home</MobileMenuNavItem>
                 {NAVIGATION.map((item) => (
                   <MobileMenuNavItem key={item.name} href={item.href}>
                     {item.name}

@@ -7,9 +7,9 @@ export type ProjectType = "Code" | "Design";
 export type FilteredType = ProjectType | "All";
 
 export const NAVIGATION: NavigationItem[] = [
+  { name: "Home", href: "/" },
   { name: "Projects", href: "/projects" },
   { name: "About", href: "/about" },
-  { name: "Services", href: "/services" },
   { name: "Contact", href: "/contact" },
 ];
 

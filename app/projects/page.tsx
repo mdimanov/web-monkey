@@ -15,7 +15,7 @@ export default function Projects() {
   return (
     <>
       <BlurWrapper>
-        <div className="bg-about-content">
+        <div className="bg-project-content">
           <Header />
           <div className="relative isolate px-6 pt-14 lg:px-8">
             <BlobAnimatedBackground />

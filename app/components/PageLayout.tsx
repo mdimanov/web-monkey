@@ -53,11 +53,12 @@ const Child = forwardRef<
           animate={{ height: "0vh", top: "-200px", transition: { delay: 1.6 } }}
         >
           <motion.h1
-            className="text-4xl pb-4 md:pb-0 font-black tracking-tight text-white sm:text-6xl"
+            className="text-4xl pb-4 md:pb-0 font-black tracking-tight sm:text-6xl"
             style={{
               position: "absolute",
               left: "50%",
               top: "40%",
+              color: "#003d27",
               textTransform: "capitalize",
               textAlign: "center",
               x: "-50%",

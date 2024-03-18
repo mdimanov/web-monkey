@@ -20,7 +20,7 @@ const useContentfulProjects = () => {
     };
 
     fetchData();
-  }, []);
+  });
 
   const getProjects = async () => {
     const projectsData = await client.getEntries();

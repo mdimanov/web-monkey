@@ -19,7 +19,7 @@ const Header = () => {
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Link
-              href="/"
+              href="/contact"
               className="btn-outline text-sm font-semibold leading-6 text-white hover:bg-emerald-400 hover:text-white"
             >
               <div className="flex justify-center items-center">

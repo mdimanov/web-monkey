@@ -76,7 +76,7 @@ export default function About() {
             variants={variants}
             transition={{ duration: 2, ease: "easeOut" }}
             ref={ref}
-            className="services p-6 md:p-24"
+            className="services p-6 md:p-24 mb-6 md:mb-24"
           >
             <div className="container mx-auto px-4">
               <div className="services-grid">
