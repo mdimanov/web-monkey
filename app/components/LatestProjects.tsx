@@ -1,3 +1,4 @@
+"use client";
 import SingleProject from "./SingleProject";
 import useContentfulProjects from "../hooks/useContentfulProjects";
 
