@@ -49,9 +49,9 @@ const ContactForm = () => {
     if (budget >= 3000 && budget <= 6000) {
       return "You can do it better. 😔";
     } else if (budget > 6000 && budget <= 14500) {
-      return "Budgeting champ! You're crushing it! 😃";
+      return "You're crushing it! 😃";
     } else if (budget > 14500) {
-      return "You're a financial rockstar! 😎";
+      return "WOW a financial rockstar! 😎";
     }
   };
 
