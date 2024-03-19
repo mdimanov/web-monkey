@@ -51,7 +51,7 @@ const ContactForm = () => {
     } else if (budget > 6000 && budget <= 14500) {
       return "You're crushing it! 😃";
     } else if (budget > 14500) {
-      return "WOW a financial rockstar! 😎";
+      return "WOW financial rockstar! 😎";
     }
   };
 
@@ -136,7 +136,7 @@ const ContactForm = () => {
               step="500"
               className="w-full appearance-none bg-emerald-400 h-px rounded-md"
             />
-            <div className="flex justify-between	">
+            <div className="flex justify-between md:text-base text-sm">
               <span>{getBudgetText(formData.budget)}</span>
               <strong>{displayBudget(formData.budget)}</strong>
             </div>
