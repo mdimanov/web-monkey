@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Webmonkey - Bringing Ideas to Life. Where Creativity Meets Code",
   description:
     "Hello, I`m Miro, a passionate front-end developer on a mission to turn dreams into interactive realities.",
+  metadataBase: new URL("https://webmonkey.bg/"),
 };
 
 export const viewport: Viewport = {
