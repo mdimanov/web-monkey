@@ -61,6 +61,11 @@ button {
 
 .btn-outline:hover {
   border: 1px solid transparent;
+  color: var(--color-dark-emerald);
+}
+
+.btn-dark-green-color-text {
+  color: var(--color-dark-emerald);
 }
 
 .mobile-menu {

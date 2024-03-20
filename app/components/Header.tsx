@@ -20,7 +20,7 @@ const Header = () => {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Link
               href="/contact"
-              className="btn-outline text-sm font-semibold leading-6 text-white hover:bg-emerald-400 hover:text-white"
+              className="btn-outline text-sm font-semibold leading-6 text-white hover:bg-emerald-400"
             >
               <div className="flex justify-center items-center">
                 <svg

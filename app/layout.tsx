@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import type { Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import PageLayout from "./components/PageLayout";
@@ -13,13 +12,6 @@ export const metadata: Metadata = {
   description:
     "Hello, I`m Miro, a passionate front-end developer on a mission to turn dreams into interactive realities.",
   metadataBase: new URL("https://webmonkey.bg/"),
-};
-
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
 };
 
 export default function RootLayout({
