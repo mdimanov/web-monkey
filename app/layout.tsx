@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import PageLayout from "./components/PageLayout";
 import { BlurProvider } from "./components/BlurContext";
@@ -27,6 +28,9 @@ export default function RootLayout({
           <BlurProvider>{children}</BlurProvider>
         </PageLayout>
       </body>
+      <GoogleAnalytics
+        gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_TRACKING_ID || ""}
+      />
     </html>
   );
 }
