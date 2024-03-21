@@ -10,6 +10,33 @@ const initialFormData = {
   message: "",
 };
 
+const customToastStyle = {
+  borderRadius: "8px",
+  background: "rgb(52 211 153 / 1)",
+  color: "#003d27",
+  maxWidth: "420px",
+  padding: "16px",
+  display: "flex",
+  alignItems: "center",
+};
+
+const customIcon = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth="1.5"
+    stroke="currentColor"
+    className="w-16 h-16 mr-2"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="m4.5 12.75 6 6 9-13.5"
+    />
+  </svg>
+);
+
 const ContactForm = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [formData, setFormData] = useState(initialFormData);
@@ -39,7 +66,14 @@ const ContactForm = () => {
       setFormData(initialFormData);
       setIsLoading(false);
       toast.success(
-        `Hey ${formData.name}, thanks for reaching out! Let's make some magic happen!`
+        <div>
+          Hey <strong>{formData.name}</strong>, thanks for reaching out! Let`s
+          make some magic happen!
+        </div>,
+        {
+          icon: customIcon,
+          style: customToastStyle,
+        }
       );
     }
   };

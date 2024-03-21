@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en" style={{ scrollBehavior: "smooth" }}>
       <body className={inter.className}>
         <PageLayout>
-          <Toaster position="bottom-center" toastOptions={{ duration: 8000 }} />
+          <Toaster position="top-center" toastOptions={{ duration: 8000 }} />
           <BlurProvider>{children}</BlurProvider>
         </PageLayout>
       </body>

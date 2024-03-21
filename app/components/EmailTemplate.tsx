@@ -16,7 +16,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
   message,
 }) => (
   <div>
-    <h1>Email from, {name}!</h1>
+    <h2>Email from, {name}.</h2>
     <p>{email}</p>
     <p>
       phone: <strong>{phone}</strong>
@@ -26,7 +26,8 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
     </p>
     <br />
     <p>
-      <h2>€{budget}</h2>
+      <span>My budget is: </span>
+      <h3>€{budget}</h3>
     </p>
   </div>
 );
