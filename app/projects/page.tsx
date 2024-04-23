@@ -23,7 +23,7 @@ export default function Projects() {
               <div className="flex flex-col md:flex-row py-20 sm:py-28 lg:py-36">
                 <div className="md:w-2/5 md:px-4 px-0">
                   <h1 className="text-4xl pb-4 md:pb-0 relative font-black tracking-tight text-white sm:text-6xl z-10">
-                    Behind each project lies a 🌟 unique story
+                    Behind each project is a 🌟 unique story
                   </h1>
                 </div>
               </div>
