@@ -63,7 +63,12 @@ const SingleProject: React.FC<ProjectData & { gridSize: number }> = ({
             {title}
           </h3>
           {url !== undefined && (
-            <Link href={url} target="_blank" className="p-3 hover:rotate-45">
+            <Link
+              href={url}
+              target="_blank"
+              className="p-3 hover:rotate-45"
+              aria-label="Open link in new tab"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
