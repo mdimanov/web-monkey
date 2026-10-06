@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import SocialNetworks from "../components/SocialNetworks";
 
 const Footer = () => {
@@ -9,19 +10,23 @@ const Footer = () => {
           <div className="md:w-1/2 w-full">
             <h2 className="text-4xl font-black tracking-tight text-white sm:text-6xl">
               <strong>Have an idea?</strong> <br />
-              <span className="font-light">Let’s build it toghether!</span>
+              <span className="font-light">Let`s build it toghether!</span>
             </h2>
           </div>
-          <div className="mail-container flex relative justify-center items-center w-1/2 py-4 md:py-8">
+          <Link
+            href="/contact"
+            className="mail-container flex relative justify-center items-center w-1/2 py-4 md:py-8"
+            aria-label="Go to contact page"
+          >
             <Image
               src="/assets/images/text-circle.png"
-              width="220"
-              height="220"
+              width={220}
+              height={220}
               alt="Come say hi"
-              className="rotate absolute "
+              className="rotate absolute"
             />
             <div
-              className="mail cursor-pointer absolute rounded-full  p-4 md:p-8"
+              className="mail cursor-pointer absolute rounded-full p-4 md:p-8"
               style={{
                 boxShadow:
                   "0 1.0077627319085878px 2.6201831029623284px -0.3125px #00000040, 0 2.3885756205709185px 6.210296613484388px -0.625px #00000040, 0 4.357008827588287px 11.328222951729547px -0.9375px #00000040, 0 7.2435184293135535px 18.83314791621524px -1.25px #00000040, 0 11.697691633173964px 30.413998246252305px -1.5625px #00000040, 0 19.147960564453385px 49.7846974675788px -1.875px #00000040, 0 32.97149505802081px 85.7258871508541px -2.1875px #00000040, 0 60px 156px -2.5px #00000040, 0 0 120px 40px #124cf240",
@@ -72,12 +77,12 @@ const Footer = () => {
                 />
               </svg>
             </div>
-          </div>
+          </Link>
         </div>
         <div className="flex md:pt-20 pt-5">
           <div className="flex items-center w-1/2">
             <span className="text-md font-light tracking-tight text-white sm:text-xl">
-              © All Rights Reserved
+              &copy; All Rights Reserved
             </span>
           </div>
           <div className="flex justify-end items-center w-1/2">
